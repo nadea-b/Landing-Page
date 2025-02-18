@@ -19,7 +19,12 @@
         </div>
     </nav>
 
-    <section id="hero">
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Servicii Juridice Profesionale</h1>
+            <p>Expertiza legală de încredere pentru protejarea drepturilor dumneavoastră</p>
+            <a href="#contact" class="btn">Programează o Consultație</a>
+        </div>
     </section>
 
     <section id="servicii">
@@ -76,6 +81,53 @@
     @media (max-width: 768px) {
         .nav-links {
             display: none;
+        }
+    }
+    </style>
+
+<style>
+    .hero {
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1') center/cover;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 0 2rem;
+    }
+    
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #c0392b;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background 0.3s;
+    }
+    
+    .btn:hover {
+        background: #a93226;
+    }
+    
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2rem;
         }
     }
     </style>
