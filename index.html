@@ -9,6 +9,14 @@
 <body>
     <!-- Basic structure -->
     <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Cabinet Avocat</a>
+            <div class="nav-links">
+                <a href="#servicii">Servicii</a>
+                <a href="#despre">Despre</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
     </nav>
 
     <section id="hero">
@@ -24,3 +32,50 @@
     </section>
 </body>
 </html>
+
+<style>
+    .nav {
+        position: fixed;
+        width: 100%;
+        background: #312d66;
+        padding: 1rem 0;
+        z-index: 100;
+    }
+    
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+    
+    .nav-logo {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+        color: #ecf0f1;
+    }
+    
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+        }
+    }
+    </style>
