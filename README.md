@@ -10,6 +10,16 @@ A professional landing page for a law firm, built with vanilla HTML and CSS.
 - Contact form
 - Modern and professional look
 
+## Screenshots
+
+![Homepage screenshot](Images/Hero.png)
+![Services section](Images/AboutUs&Services.png)
+![Contact form](Images/ContactUs.png)
+
+## Live Demo
+
+[View Live Demo](https://nadea-b.github.io/Landing-Page/)
+
 ## Development
 
 1. Clone the repository
