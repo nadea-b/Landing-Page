@@ -54,7 +54,29 @@
         <p>Cu o experiență de peste 15 ani în domeniul juridic, oferim servicii de înaltă calitate și reprezentare profesională pentru clienții noștri. Ne dedicăm fiecărui caz cu atenție și profesionalism, asigurând cele mai bune rezultate posibile.</p>
     </section>
 
-    <section id="contact">
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contactează-ne</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="nume">Nume Complet</label>
+                    <input type="text" id="nume" name="nume" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefon">Telefon</label>
+                    <input type="tel" id="telefon" name="telefon">
+                </div>
+                <div class="form-group">
+                    <label for="mesaj">Mesaj</label>
+                    <textarea id="mesaj" name="mesaj" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Trimite Mesaj</button>
+            </form>
+        </div>
     </section>
 </body>
 </html>
@@ -185,4 +207,27 @@
     max-width: 1200px;
     margin: 0 auto;
     }
+
+    .contact {
+    background: #2c3e50;
+    color: white;
+    padding: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
     </style>
