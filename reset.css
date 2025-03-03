@@ -114,3 +114,13 @@ p, h1, h2, h3, h4, h5, h6 {
       display: block;
     }
   }
+
+  @media (max-width: 600px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+      padding: 1.5rem;
+    }
+  }
