@@ -81,3 +81,36 @@ p, h1, h2, h3, h4, h5, h6 {
       font-size: 0.9rem;
     }
   }
+
+  .mobile-only {
+    display: none;
+    padding: 2rem;
+    background: #f9e8e0;
+  }
+  
+  .resources-list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .resource-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .resource-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #773615;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-only {
+      display: block;
+    }
+  }
