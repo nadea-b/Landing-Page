@@ -110,6 +110,16 @@
         </div>
     </div>
 
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+          document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        setTimeout(function() {
+          document.querySelector('.mascot-container').classList.add('mascot-visible');
+        }, 3000);
+      </script>
+
 </body>
 </html>
 
