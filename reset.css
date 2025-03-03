@@ -137,3 +137,65 @@ p, h1, h2, h3, h4, h5, h6 {
       font-size: 16px; /* Prevents zoom on iOS */
     }
   }
+
+  .mascot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    z-index: 99;
+    display: none; /* Initially hidden */
+    cursor: pointer;
+  }
+  
+  .mascot {
+    width: 100%;
+    height: 100%;
+    animation: bounce 2s infinite alternate;
+  }
+  
+  .mascot-message {
+    position: absolute;
+    right: 90px;
+    bottom: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    width: 200px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  
+  .mascot-message:after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    bottom: 20px;
+    border-width: 10px 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+  }
+  
+  .mascot-container:hover .mascot-message {
+    opacity: 1;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(-10px) rotate(5deg);
+    }
+    100% {
+      transform: translateY(0) rotate(-5deg);
+    }
+  }
+  
+  /* This is used to show the mascot after delay */
+  .mascot-visible {
+    display: block;
+  }
