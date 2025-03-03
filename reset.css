@@ -27,3 +27,42 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+    
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #512610;
+      flex-direction: column;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    
+    .nav-links.active {
+      display: flex;
+    }
+    
+    .nav-links a {
+      padding: 0.5rem 0;
+    }
+  }

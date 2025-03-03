@@ -16,6 +16,11 @@
                 <a href="#despre">Despre</a>
                 <a href="#contact">Contact</a>
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
         </div>
     </nav>
 
@@ -78,6 +83,12 @@
             </form>
         </div>
     </section>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+          document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
 
