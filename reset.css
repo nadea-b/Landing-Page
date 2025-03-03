@@ -124,3 +124,13 @@ p, h1, h2, h3, h4, h5, h6 {
       padding: 1.5rem;
     }
   }
+
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 0 1rem;
+    }
+    
+    input, textarea {
+      font-size: 16px; /* Prevents zoom on iOS */
+    }
+  }
