@@ -91,6 +91,7 @@ p, h1, h2, h3, h4, h5, h6 {
   .resources-list {
     max-width: 600px;
     margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
   }
   
   .resource-item {
@@ -99,6 +100,7 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
   }
   
   .resource-link {
@@ -107,6 +109,7 @@ p, h1, h2, h3, h4, h5, h6 {
     color: #773615;
     font-weight: bold;
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
   }
   
   @media (max-width: 768px) {
