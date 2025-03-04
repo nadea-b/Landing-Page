@@ -1,201 +1,201 @@
 /* Reset CSS */
 *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 input, button, textarea, select {
-    font: inherit;
+  font: inherit;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #512610;
     flex-direction: column;
-    cursor: pointer;
+    padding: 1rem 0;
+    text-align: center;
   }
   
-  .hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
+  .nav-links.active {
+    display: flex;
   }
   
-  @media (max-width: 768px) {
-    .hamburger {
-      display: flex;
-    }
-    
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: #512610;
-      flex-direction: column;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    
-    .nav-links.active {
-      display: flex;
-    }
-    
-    .nav-links a {
-      padding: 0.5rem 0;
-    }
+  .nav-links a {
+    padding: 0.5rem 0;
   }
+}
 
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-    
-    .hero p {
-      font-size: 1rem;
-    }
-    
-    .btn {
-      padding: 0.8rem 1.5rem;
-      font-size: 0.9rem;
-    }
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
   }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
 
+.mobile-only {
+  display: none;
+  padding: 2rem;
+  background: #f9e8e0;
+}
+
+.resources-list {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+.resource-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.resource-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #773615;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 768px) {
   .mobile-only {
-    display: none;
-    padding: 2rem;
-    background: #f9e8e0;
-  }
-  
-  .resources-list {
-    max-width: 600px;
-    margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .resource-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 1rem;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .resource-link {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #773615;
-    font-weight: bold;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  @media (max-width: 768px) {
-    .mobile-only {
-      display: block;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .service-card {
-      padding: 1.5rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .contact-form {
-      padding: 0 1rem;
-    }
-    
-    input, textarea {
-      font-size: 16px; /* Prevents zoom on iOS */
-    }
-  }
-
-  .mascot-container {
-    position: fixed;
-    bottom: 20px;
-    right: 200px;
-    width: 240px;
-    height: 240px;
-    z-index: 99;
-    display: none; 
-    cursor: pointer;
-  }
-  
-  .mascot {
-    width: 180%;
-    height: 180%;
-    animation: bounce 2s infinite alternate;
-  }
-  
-  .mascot-message {
-    position: absolute;
-    right: 40px;
-    bottom: 82px;
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    width: 200px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-  }
-  
-  .mascot-message:after {
-    content: '';
-    position: absolute;
-    right: -10px;
-    bottom: 20px;
-    border-width: 10px 0 10px 10px;
-    border-style: solid;
-    border-color: transparent transparent transparent white;
-  }
-  
-  .mascot-container:hover .mascot-message {
-    opacity: 1;
-  }
-  
-  @keyframes bounce {
-    0% {
-      transform: translateY(0) rotate(0);
-    }
-    50% {
-      transform: translateY(-10px) rotate(5deg);
-    }
-    100% {
-      transform: translateY(0) rotate(-5deg);
-    }
-  }
-  
-  /* This is used to show the mascot after delay */
-  .mascot-visible {
     display: block;
   }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 0 1rem;
+  }
+  
+  input, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+.mascot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 200px;
+  width: 240px;
+  height: 240px;
+  z-index: 99;
+  display: none; 
+  cursor: pointer;
+}
+
+.mascot {
+  width: 180%;
+  height: 180%;
+  animation: bounce 2s infinite alternate;
+}
+
+.mascot-message {
+  position: absolute;
+  right: 40px;
+  bottom: 82px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  width: 200px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.mascot-message:after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: 20px;
+  border-width: 10px 0 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.mascot-container:hover .mascot-message {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+}
+
+/* This is used to show the mascot after delay */
+.mascot-visible {
+  display: block;
+}
