@@ -1,6 +1,6 @@
 # Cabinet de Avocatură - Landing Page
 
-A professional landing page for a law firm, built with vanilla HTML and CSS.
+A professional landing page for a law firm, built with HTML, CSS, and Bootstrap.
 
 ## Features
 
@@ -13,9 +13,20 @@ A professional landing page for a law firm, built with vanilla HTML and CSS.
 - Interactive mascot with animations
 - Hover effects and notifications
 
+## CSS Framework Implementation
+
+The project now utilizes Bootstrap 5 for enhanced styling and responsiveness:
+
+- Card components for service offerings with consistent styling
+- Responsive grid system for layouts (col-md-6, col-lg-3)
+- Form component styling with built-in validation classes
+- Utility classes for spacing (py-5, mb-4, g-4) and alignment
+- Shadow and color styling from Bootstrap's design system
+- Enhanced mobile responsiveness without custom media queries
+
 ## Responsive Features
-- Hamburger menu navigation for mobile devices
-- Scaling elements for different screen sizes
+- Bootstrap navbar with built-in responsive behavior
+- Grid system that adapts to different screen sizes
 - Mobile-only resources section
 - Optimized form inputs for mobile interaction
 
@@ -50,6 +61,7 @@ The site is deployed using GitHub Pages
 
 - HTML5
 - CSS3
+- Bootstrap 5
 
 ## Commit History
 
@@ -67,3 +79,7 @@ The site is deployed using GitHub Pages
 12. Create justice scales SVG mascot
 13. Add mascot container and message bubble
 14. Implement mascot animation and delay reveal
+15. Integrate Bootstrap 5 framework
+16. Convert services section to Bootstrap cards
+17. Update form with Bootstrap components
+18. Customize Bootstrap theme colors
