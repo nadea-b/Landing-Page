@@ -157,45 +157,72 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .mascot-message {
   position: absolute;
-  right: 40px;
-  bottom: 82px;
+  right: 30px;
+  bottom: 20px;
   background: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  width: 200px;
+  padding: 5px; 
+  border-radius: 4px; 
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2); 
+  width: 100px; 
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
+  font-size: 0.7em; 
 }
 
 .mascot-message:after {
   content: '';
   position: absolute;
-  right: -10px;
-  bottom: 20px;
-  border-width: 10px 0 10px 10px;
+  right: -7px; 
+  bottom: 15px; 
+  border-width: 7px 0 7px 7px;
   border-style: solid;
   border-color: transparent transparent transparent white;
 }
-
-.mascot-container:hover .mascot-message {
-  opacity: 1;
+.mascot-container {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 80px !important;
+  width: 80px !important;
+  height: 80px !important;
+  z-index: 9999 !important; /* Increased z-index */
+  display: none !important; /* Initially hidden */
+  cursor: pointer !important;
 }
 
-@keyframes bounce {
+/* Simple slide-in animation for the mascot */
+@keyframes mascotSlideIn {
   0% {
-    transform: translateY(0) rotate(0);
-  }
-  50% {
-    transform: translateY(-10px) rotate(5deg);
+    transform: translateX(100px);
+    opacity: 0;
   }
   100% {
-    transform: translateY(0) rotate(-5deg);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-/* This is used to show the mascot after delay */
+/* Apply this animation when mascot becomes visible */
 .mascot-visible {
-  display: block;
+  display: block !important;
+  animation: mascotSlideIn 0.5s ease-out forwards;
+}
+
+:root {
+  --bs-primary: #773615 !important;
+  --bs-primary-rgb: 119, 54, 21 !important;
+}
+
+.btn-primary {
+  background-color: #773615 !important;
+  border-color: #773615 !important;
+}
+
+.btn-primary:hover {
+  background-color: #a0331a !important;
+  border-color: #a0331a !important;
+}
+
+.text-primary {
+  color: #773615 !important;
 }
